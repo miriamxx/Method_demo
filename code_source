@@ -1,0 +1,88 @@
+/*
+ * The purpose of this assignment is to prompt the user for 3 integers
+ * use those values and determine which integer is the largest. 
+ * We will be creating a method called bigger, that will accept the integers then 
+ * will return the larger one of these integers. We will be using int as our 
+ * datatype value in our method to get a result value. 
+ * 
+ */
+package methodassignment;
+
+import java.util.Scanner;
+/**
+ *
+ * @author miriamespino
+ * November 28, 2018 
+ * CSC 210 
+ * 
+ */
+public class MethodAssignment
+{
+
+  public static void main(String[] args)
+          
+  {
+     Scanner keyboard= new Scanner(System.in);  
+      
+     int num1 = 0;
+     int num2 = 0;
+     int num3 = 0;
+    
+     int intResult;
+      
+     System.out.println("Please enter 3 integers");
+     
+     num1 = keyboard.nextInt();
+     num2 = keyboard.nextInt();
+     num3 = keyboard.nextInt();
+    
+  
+     // Call the bigger method and assign the returned
+     // value to the variable larger
+     
+     intResult = bigger(num1, num2, num3);
+
+     System.out.println(intResult);
+
+     System.exit(0);
+     
+  }
+  
+ 
+  /*
+     The method bigger accepts three integer arguments and
+     compares these integers. The method returns the larger
+     of the two integers.
+     Execution of a return statement causes the method to
+     terminate and return control to the caller. With a
+     method that returns a value, the return statement must
+     also specify the value to be returned to the caller.
+     The data type of this value must agree with the type
+     indicated in the method header.
+  */
+
+  public static int bigger(int n1, int n2, int n3)
+  {
+       System.out.print("The largest interger is: " );
+     
+    {
+     if (n1 > n2)     
+        return n1; 
+    
+        else if ( n1 < n2)
+        return n2; 
+     
+        else if (n2 > n3)
+         return n2;
+     
+        else if (n2 < n3)
+         return n3;
+     
+     else 
+         System.exit(0);
+      }
+  
+       return 0;
+  }
+}
+
